@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.board {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    height: 30%;
+    width: 30%; 
+    background-color: white;
+    margin: 1%; 
+    cursor: pointer;
+    display: block;
+}
