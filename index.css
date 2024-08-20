@@ -1,13 +1,73 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size:100%;
+    background-size: 100%;
     background-image: url('wood-wallpaper-23.jpg');
     height: 100vh;
     margin: 0;
-    background-color: #f3eac0;
 }
+
+.main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.tic {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.l-shape-right {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: 30px;
+    transform: scaleX(-1); 
+}
+
+.l-shape-right .vertical {
+    width: 150px;
+    height: 130px;
+    border: 1px solid black;
+    background-color: #ffff;
+    opacity: 50%;
+    border-radius: 20px 20px 0 0px;
+    position: absolute;
+    top: 100px;
+    left: 30px; 
+}
+
+.l-shape-right .horizontal {
+    width: 100%;
+    height: 110px;
+    border: 1px solid black;
+    background-color: #ffff;
+    opacity: 50%;
+    border-radius: 0 20px 20px 20px;
+    position: absolute;
+    top: 230px;
+    left: 30px;
+}
+
+/* ... your existing code ... */
+  
+  .board {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Add drop shadow */
+  }
+  
+  .box {
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2); /* Inner shadow */
+  }
+  
+  .x-mark, .o-mark {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Increased shadow */
+  }
+  
+  .x-mark:hover, .o-mark:hover {
+    transform: scale(1.1); /* Hover effect */
+  }
 
 .board {
     display: grid;
@@ -16,28 +76,56 @@ body {
     background-color: #6a3f1b;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    /* border: 10px solid #8b5a2b;  */
     border-radius: 20px;
+}
+.right{
+    position: absolute;
+    right: 100px;
+}
+.l-shape {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+
+.l-shape .vertical {
+    width: 150px;
+    height: 130px;
+    border: 1px solid black;
+    background-color: #ffff;
+    opacity: 50%;
+    border-radius: 20px 20px 0 0px;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+
+.l-shape .horizontal {
+    width: 100%;
+    height: 110px;
+    border: 1px solid black;
+    background-color: #ffff;
+    opacity: 50%;
+    border-radius: 0 20px 20px 20px;
+    position: absolute;
+    top: 230px;
+    left: 30px;
 }
 
 #box1 {
     border-top-left-radius: 20px;
-    /* Top-left corner */
 }
 
 #box3 {
     border-top-right-radius: 20px;
-    /* Top-right corner */
 }
 
 #box7 {
     border-bottom-left-radius: 20px;
-    /* Bottom-left corner */
 }
 
 #box9 {
     border-bottom-right-radius: 20px;
-    /* Bottom-right corner */
 }
 
 .box {
@@ -47,19 +135,14 @@ body {
     justify-content: center;
     align-items: center;
     background-size: cover;
-    /* Ensure the background image covers the box */
     background-position: center;
-    /* Center the image */
     background-repeat: no-repeat;
-    /* Avoid repeating the image */
     font-size: 3rem;
     color: transparent;
 }
 
 .light {
     background-color: #d8b384;
-    /* Light wood color */
-    /* background-image: radial-gradient(#d8b384, #c9a46a, #c9a46a, #d8b384, #d8b384, #c9a46a); */
     background-size: 200% 200%;
     background-image: url(https://tse1.mm.bing.net/th?id=OIP.U50enectlTS59a1Ky8rkdQHaHa&pid=Api&rs=1&c=1&qlt=95&w=114&h=114);
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
@@ -67,14 +150,11 @@ body {
 
 .dark {
     background-color: #8b5a2b;
-    /* Dark wood color */
-    /* background-image: radial-gradient(#8b5a2b, #6a3f1b, #8b5a2b); */
     background-image: url(https://tse3.mm.bing.net/th?id=OIP.icO-3fPINumwRDACDZzzKwHaEo&pid=Api&P=0&h=180);
     background-size: 200% 200%;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Styles for X and O */
 .x-mark::before {
     content: "✘";
     font-size: 3rem;
